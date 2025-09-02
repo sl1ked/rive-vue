@@ -2,21 +2,25 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: [
-    'plugin:react/recommended',
+    'eslint:recommended',
+    '@vue/eslint-config-typescript',
+    'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-strongly-recommended',
+    'plugin:vue/vue3-recommended',
     'prettier',
     'plugin:storybook/recommended',
   ],
-  parser: '@typescript-eslint/parser',
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
+    parser: '@typescript-eslint/parser',
+    ecmaVersion: 2021,
     sourceType: 'module',
+    extraFileExtensions: ['.vue'],
   },
-  plugins: ['@typescript-eslint', 'prettier', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'prettier', 'vue'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',
     'prefer-const': [
@@ -27,12 +31,18 @@ module.exports = {
     ],
     'no-var': 'error',
     eqeqeq: ['error', 'smart'],
-    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-    'react-hooks/exhaustive-deps': 'off', // Checks effect dependencies
+    'vue/multi-word-component-names': 'off',
+    'vue/no-unused-vars': 'error',
+    'vue/script-setup-uses-vars': 'error',
   },
-  settings: {
-    react: {
-      version: 'detect',
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        'vue/no-unused-vars': 'error',
+      },
     },
-  },
+  ],
 };

@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/vue3';
 
-import ResponsiveLayout from './ResponsiveLayout';
+import ResponsiveLayout from './ResponsiveLayout.vue';
 
 const meta = {
-  title: 'ResponsiveLayout',
+  title: 'Rive Vue/ResponsiveLayout',
   component: ResponsiveLayout,
   parameters: {
     layout: 'fullscreen',
@@ -14,4 +14,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {}; 

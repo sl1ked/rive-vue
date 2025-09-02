@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/vue3';
 
-import DataBinding from './DataBinding';
+import DataBinding from './DataBinding.vue';
 
 const meta = {
-  title: 'DataBinding',
+  title: 'Rive Vue/DataBinding',
   component: DataBinding,
   parameters: {
     layout: 'fullscreen',
@@ -14,4 +14,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {}; 

@@ -1,14 +1,13 @@
-![Build Status](https://github.com/rive-app/rive-react/actions/workflows/tests.yml/badge.svg)
 ![Discord badge](https://img.shields.io/discord/532365473602600965)
 ![Twitter handle](https://img.shields.io/twitter/follow/rive_app.svg?style=social&label=Follow)
 
-# Rive React
+# Rive Vue
 
 ![Rive hero image](https://cdn.rive.app/rive_logo_dark_bg.png)
 
-A React runtime library for [Rive](https://rive.app).
+A Vue runtime library for [Rive](https://rive.app).
 
-This library is a wrapper around the [JS/Wasm runtime](https://github.com/rive-app/rive-wasm), giving full control over the js runtime while providing components and hooks for React applications.
+This library is a wrapper around the [JS/Wasm runtime](https://github.com/rive-app/rive-wasm), giving full control over the js runtime while providing components and hooks for Vue applications.
 
 ## Table of contents
 
@@ -32,9 +31,9 @@ This library is a wrapper around the [JS/Wasm runtime](https://github.com/rive-a
 
 ## Getting started
 
-Follow along with the link below for a quick start in getting Rive React integrated into your React apps.
+Follow along with the link below for a quick start in getting Rive Vue integrated into your Vue apps.
 
-- [Getting Started with Rive in React](https://rive.app/community/doc/react/docRfaSQ0eaE)
+- [Getting Started with Rive in Vue](Not yet)
 - [API documentation](https://rive.app/community/doc/parameters-and-return-values/docJlDMNulDh)
 
 For more information, see the Runtime sections of the Rive help documentation:
@@ -48,7 +47,7 @@ For more information, see the Runtime sections of the Rive help documentation:
 
 ## Supported versions
 
-This library supports React versions `^16.8.0` through `^18.0.0`.
+This library supports Vue versions `^16.8.0` through `^18.0.0`.
 
 ## Examples
 
@@ -70,7 +69,3 @@ Using an older version of the runtime and need to learn how to upgrade to the la
 ## Contributing
 
 We love contributions! Check out our [contributing docs](./CONTRIBUTING.md) to get more details into how to run this project, the examples, and more all locally.
-
-## Issues
-
-Have an issue with using the runtime, or want to suggest a feature/API to help make your development life better? Log an issue in our [issues](https://github.com/rive-app/rive-react/issues) tab! You can also browse older issues and discussion threads there to see solutions that may have worked for common problems.

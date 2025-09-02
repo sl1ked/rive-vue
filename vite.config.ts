@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src-vue/index.ts'),
+      entry: resolve(__dirname, 'src/index.ts'),
       name: 'RiveVue',
       fileName: (format) => `rive-vue.${format}.js`
     },
@@ -25,7 +25,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src-vue')
+      '@': resolve(__dirname, 'src')
     }
   }
 }) 

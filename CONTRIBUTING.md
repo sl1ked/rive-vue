@@ -29,7 +29,7 @@ To run Storybook, run the following command in the terminal:
 npm run storybook
 ```
 
-To see changes made to the Rive React runtime reflected in your storyook, run the following command in a separate terminal window:
+To see changes made to the Rive Vue runtime reflected in your storyook, run the following command in a separate terminal window:
 
 ```
 npm run dev

@@ -1,31 +1,47 @@
-// Main entry point for Vue components and composables
-export { default as RiveCanvas } from './components/RiveCanvas.vue'
+// Vue components
+export { default as RiveCanvas } from './components/RiveCanvas.vue';
+export { default as RiveComponent } from './components/RiveComponent.vue';
 
 // Core composables
-export { useRive } from './composables/useRive'
-export { useRiveFile } from './composables/useRiveFile'
+export { useRive } from './composables/useRive';
 
-// View Model composables
-export { useViewModel } from './composables/useViewModel'
-export { useViewModelInstance } from './composables/useViewModelInstance'
-export { useViewModelString } from './composables/useViewModelString'
-export { useViewModelNumber } from './composables/useViewModelNumber'
-export { useViewModelBoolean } from './composables/useViewModelBoolean'
-export { useViewModelColor } from './composables/useViewModelColor'
-export { useViewModelEnum } from './composables/useViewModelEnum'
-export { useViewModelTrigger } from './composables/useViewModelTrigger'
-export { useViewModelImage } from './composables/useViewModelImage'
-export { useViewModelList } from './composables/useViewModelList'
+// Utility composables  
+export { useStateMachineInput } from './composables/useStateMachineInput';
+export { useRiveFile } from './composables/useRiveFile';
 
-// Utility composables
-export { useStateMachineInput } from './composables/useStateMachineInput'
-export { useResizeCanvas } from './composables/useResizeCanvas'
-export { useDevicePixelRatio } from './composables/useDevicePixelRatio'
-export { useIntersectionObserver } from './composables/useIntersectionObserver'
-export { useContainerSize } from './composables/useContainerSize'
+// ViewModel composables
+export { useViewModel } from './composables/useViewModel';
+export { useViewModelInstance } from './composables/useViewModelInstance';
 
-// Types
-export * from './types'
+// ViewModel property composables
+export { useViewModelInstanceString } from './composables/useViewModelInstanceString';
+export { useViewModelInstanceNumber } from './composables/useViewModelInstanceNumber';
+export { useViewModelInstanceBoolean } from './composables/useViewModelInstanceBoolean';
+export { useViewModelInstanceColor } from './composables/useViewModelInstanceColor';
+export { useViewModelInstanceEnum } from './composables/useViewModelInstanceEnum';
+export { useViewModelInstanceTrigger } from './composables/useViewModelInstanceTrigger';
+export { useViewModelInstanceImage } from './composables/useViewModelInstanceImage';
+export { useViewModelInstanceList } from './composables/useViewModelInstanceList';
 
-// Re-export everything from @rive-app/canvas for convenience
-export * from '@rive-app/canvas' 
+// Re-export utilities from canvas package
+export { decodeImage } from '@rive-app/canvas';
+
+// Re-export types
+export type { UseRiveParameters, UseRiveOptions } from './types';
+export type { UseRiveFileParameters, FileStatus, RiveFileState } from './composables/useRiveFile';
+export type { 
+  UseViewModelParameters,
+  UseViewModelInstanceParameters,
+  UseViewModelInstanceStringResult,
+  UseViewModelInstanceNumberResult,
+  UseViewModelInstanceBooleanResult,
+  UseViewModelInstanceColorResult,
+  UseViewModelInstanceEnumResult,
+  UseViewModelInstanceTriggerParameters,
+  UseViewModelInstanceTriggerResult,
+  UseViewModelInstanceImageResult,
+  UseViewModelInstanceListResult
+} from './types';
+
+// Re-export Rive types that users might need
+export type { Layout, Fit, Alignment } from '@rive-app/canvas';

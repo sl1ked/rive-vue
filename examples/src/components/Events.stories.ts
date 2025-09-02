@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/vue3';
 
-import Events from './Events';
+import Events from './Events.vue';
 
 const meta = {
-  title: 'Events',
+  title: 'Rive Vue/Events',
   component: Events,
   parameters: {
     layout: 'fullscreen',
@@ -14,4 +14,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {}; 

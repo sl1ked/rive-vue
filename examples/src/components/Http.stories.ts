@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/vue3';
 
-import Http from './Http';
+import Http from './Http.vue';
 
 const meta = {
-  title: 'Http',
+  title: 'Rive Vue/Http',
   component: Http,
   parameters: {
     layout: 'fullscreen',
@@ -14,4 +14,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {}; 

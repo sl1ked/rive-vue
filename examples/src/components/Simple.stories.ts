@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/vue3';
 
-import Simple from './Simple';
+import Simple from './Simple.vue';
 
 const meta = {
-  title: 'Simple',
+  title: 'Rive Vue/Simple',
   component: Simple,
   parameters: {
     layout: 'fullscreen',
@@ -14,4 +14,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {}; 

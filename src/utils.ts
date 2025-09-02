@@ -1,12 +1,16 @@
-import { UseRiveOptions } from './types';
+import type { UseRiveOptions } from './types';
 
-const defaultOptions = {
-  useDevicePixelRatio: true,
-  fitCanvasToArtboardHeight: false,
-  useOffscreenRenderer: true,
-  shouldResizeCanvasToContainer: true,
-};
-
-export function getOptions(opts: Partial<UseRiveOptions>) {
-  return Object.assign({}, defaultOptions, opts);
+/**
+ * Get options with default values
+ */
+export function getOptions(opts: Partial<UseRiveOptions> = {}): UseRiveOptions {
+  return {
+    useDevicePixelRatio: true,
+    customDevicePixelRatio: 0,
+    fitCanvasToArtboardHeight: false,
+    useOffscreenRenderer: true,
+    shouldResizeCanvasToContainer: true,
+    shouldUseIntersectionObserver: true,
+    ...opts,
+  };
 }

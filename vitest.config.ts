@@ -13,7 +13,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: ['./test/vue-setup.ts'],
-    include: ['test-vue/**/*.test.ts', 'src-vue/**/*.test.ts'],
+    include: ['test-vue/**/*.test.ts', 'src/**/*.test.ts'],
     globals: true,
     projects: [{
       extends: true,
@@ -39,7 +39,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src-vue')
+      '@': resolve(__dirname, 'src')
     }
   }
 });
