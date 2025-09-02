@@ -8,18 +8,12 @@
     "dist/**"
   ],
   "scripts": {
-    "test": "jest",
-    "test:vue": "vitest",
-    "build": "bunchee src/index.ts -m --no-sourcemap",
-    "build:vue": "vite build --config vite.config.ts",
-    "dev": "watch 'npm run build' src",
-    "dev:vue": "vite build --config vite.config.ts --watch",
-    "lint": "eslint -c .eslintrc.js 'src/**/*{.ts,.tsx}'",
-    "lint:vue": "eslint -c .eslintrc.js 'src/**/*{.ts,.vue}'",
+    "test": "vitest",
+    "build": "vite build --config vite.config.ts",
+    "dev": "vite build --config vite.config.ts --watch",
+    "lint": "eslint -c .eslintrc.js 'src/**/*{.ts,.vue}'",
     "format": "prettier --write src",
-    "format:vue": "prettier --write src",
-    "types:check": "tsc --noEmit",
-    "types:check:vue": "vue-tsc --noEmit",
+    "types:check": "vue-tsc --noEmit",
     "release": "release-it",
     "release:patch": "npm run release -- --ci",
     "release:minor": "npm run release -- minor --ci",
@@ -28,8 +22,8 @@
     "setup-packages": "./scripts/setup_all_packages.sh",
     "bump-versions": "./scripts/bump_all_versions.sh $npm_package_version",
     "publish:all": "./scripts/publish_all.sh --access public",
-    "storybook": "cd examples-vue && yarn --cwd examples storybook",
-    "demo:vue": "cd examples-vue && npm run dev"
+    "storybook": "cd examples && yarn --cwd examples storybook",
+    "demo": "cd examples && npm run dev"
   },
   "repository": {
     "type": "git",
@@ -53,10 +47,8 @@
   "devDependencies": {
     "@babel/core": "^7.18.0",
     "@testing-library/jest-dom": "^5.13.0",
-
     "@types/jest": "^27.0.3",
     "@types/offscreencanvas": "^2019.6.4",
-
     "@types/testing-library__jest-dom": "^5.9.5",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
@@ -74,7 +66,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
-
     "eslint-plugin-storybook": "^0.5.12",
     "eslint-plugin-vue": "^9.33.0",
     "jest": "^27.0.4",
